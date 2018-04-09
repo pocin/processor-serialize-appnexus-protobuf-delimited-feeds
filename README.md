@@ -8,7 +8,11 @@ Read all files in `/data/in/files/**/*.pb`, parse with the compiled schemas and 
 ```
 {
     "definition": {
-        "component": "pocin.processor-appnexus-protobuf-feeds"
+        "component": "pocin.processor-serialize-appnexus-protobuf-delimited-feeds"
+        },
+    "parameters": {
+          "feed_name": "pixel_feed"
+        }
     }
 }
 

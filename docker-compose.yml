@@ -3,7 +3,7 @@ services:
   # for development purposes
   dev:
     build: .
-    image: "pocin/kbc-processor-appnexus-protobuf-feeds:dev"
+    image: "pocin/kbc-processor-serialize-appnexus-protobuf-feeds:dev"
     volumes:
         - ./:/code
         - ./data/out/files/:/data/out/files/
