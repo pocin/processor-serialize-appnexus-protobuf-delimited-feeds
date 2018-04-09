@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated";
+
+message segment_feed {
+    optional fixed64 date_time       = 1;
+    optional fixed64 user_id_64      = 2;
+    optional int32 member_id         = 3;
+    optional int32 segment_id        = 4;
+    optional int32 is_daily_unique   = 5;
+    optional int32 is_monthly_unique = 6;
+    optional int32 value             = 7;
+}

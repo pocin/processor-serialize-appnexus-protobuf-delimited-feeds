@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated";
+
+message auction_kv_labels_feed {
+    optional fixed64 date_time = 1;
+    optional fixed64 auction_id_64 = 2;
+    optional fixed64 user_id_64 = 3;
+    optional string key = 4;
+    optional string value = 5;
+    optional string key_label = 6;
+    optional string value_label = 7;
+    optional bytes hashed_user_id_64 = 8 [default = ""];
+}

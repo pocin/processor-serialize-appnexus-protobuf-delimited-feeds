@@ -1,0 +1,28 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated";
+
+message enhanced_viewability_feed {
+    optional fixed64 date_time                                   =  1;
+    optional fixed64 auction_id_64                               =  2;
+    optional int32 view_detection_enabled                        =  3;
+    optional int32 view_measurable                               =  4;
+    optional int32 viewable                                      =  5;
+    optional int32 view_tracking_on                              =  6;
+    optional int32 view_screen_width                             =  7;
+    optional int32 view_screen_height                            =  8;
+    optional int32 view_banner_left                              =  9;
+    optional int32 view_banner_top                               = 10;
+    optional int32 view_banner_width                             = 11;
+    optional int32 view_banner_height                            = 12;
+    optional double view_tracking_duration                       = 13;
+    optional double view_page_duration                           = 14;
+    optional double view_surface                                 = 15;
+    optional double view_iab_duration                            = 16 [default = -1.0];
+    optional int32 view_iab_inview_count                         = 17 [default = 0];
+    optional double view_duration_gt_0pct                        = 18 [default = -1.0];
+    optional double view_duration_gt_25pct                       = 19 [default = -1.0];
+    optional double view_duration_gt_50pct                       = 20 [default = -1.0];
+    optional double view_duration_gt_75pct                       = 21 [default = -1.0];
+    optional double view_duration_eq_100pct                      = 22 [default = -1.0];
+}

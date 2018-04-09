@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated.enums";
+
+message view_non_measurable_reason_enum {
+    enum ViewNonMeasurableReason {
+        UNKNOWN = -1;
+        NOT_APPLICABLE = 0;
+        SCRIPT_NOT_SERVED = 1;
+        NO_SCRIPT_CALLBACK = 2;
+        TECHNICAL_LIMITATION = 3;
+    }
+}

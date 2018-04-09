@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated";
+
+import "includes/segment_key_value.proto";
+
+message auction_segment_feed {
+    optional fixed64 date_time                 = 1;
+    optional fixed64 auction_id_64             = 2;
+    optional fixed64 user_id_64                = 3 [default = 0];
+    optional int32 seller_member_id            = 4;
+    repeated segment_key_value segments        = 5;
+    optional bytes hashed_user_id_64           = 6 [default = ""];
+}

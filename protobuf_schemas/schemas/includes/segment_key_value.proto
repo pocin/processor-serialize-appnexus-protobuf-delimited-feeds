@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated";
+
+message segment_key_value {
+    optional int32 segment_id = 1;
+    optional int32 segment_value = 2;
+    optional int32 last_seen_min = 3;
+}

@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated";
+
+message custom_model_feed {
+    optional fixed64 date_time     = 1;
+    optional fixed64 auction_id_64 = 2;
+    optional int32 buyer_member_id = 3;
+    optional fixed64 user_id_64    = 4;
+    optional int32 model_type      = 5;
+    optional int32 custom_model_id        = 6;
+    optional string custom_model_leaf_name      = 7 [default = ""];
+    optional int32 origin          = 8;
+    optional int32 experiment      = 9;
+    optional float value           = 10;
+    optional int32 line_item_id    = 11;
+    optional bytes hashed_user_id_64 = 12 [default = ""];
+}

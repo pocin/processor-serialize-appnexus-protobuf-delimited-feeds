@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated";
+
+message pixel_feed {
+    optional fixed64 date_time       = 1;
+    optional fixed64 auction_id_64   = 2;
+    optional fixed64 user_id_64      = 3;
+    optional int32 pixel_id          = 4;
+    optional string order_id         = 5;
+    optional string external_data    = 6;
+    optional string http_referer     = 7;
+    optional bytes hashed_user_id_64 = 8 [default = ""];
+}

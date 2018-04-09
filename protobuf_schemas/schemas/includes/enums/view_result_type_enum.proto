@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated.enums";
+
+message view_result_type_enum {
+    enum ViewResultType {
+        UNKNOWN = -1;
+        VIEW_UNKNOWN = 0;
+        VIEW_DETECTED = 1;
+        VIEW_NOT_DETECTED = 2;
+        VIEW_NOT_MEASURABLE = 3;
+    }
+}

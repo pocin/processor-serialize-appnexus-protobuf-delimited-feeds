@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated.enums";
+
+message playback_method_enum {
+    enum PlaybackMethod {
+	    UNKNOWN = 0;
+	    AUTO_SOUND_ON = 1;
+	    AUTO_SOUND_OFF = 2;
+	    CLICK_TO_PLAY = 3;
+	    MOUSEOVER = 4;
+	    AUTO_SOUND_UNKNOWN = 5;
+   }
+}

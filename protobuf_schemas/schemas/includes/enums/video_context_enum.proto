@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated.enums";
+
+message video_context_enum {
+    enum VideoContext {
+	    UNKNOWN = 0;
+	    PREROLL = 1;
+	    MIDROLL = 2;
+	    POSTROLL = 3;
+	    OUTSTREAM = 4;
+	    BANNERSTREAM = 5;
+    }
+}

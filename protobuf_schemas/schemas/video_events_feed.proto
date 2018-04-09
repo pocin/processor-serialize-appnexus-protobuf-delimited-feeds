@@ -1,0 +1,53 @@
+syntax = "proto2";
+
+option java_package = "com.appnexus.data.protobuf.generated";
+
+import "includes/enums/video_context_enum.proto";
+import "includes/enums/playback_method_enum.proto";
+import "includes/enums/view_result_type_enum.proto";
+import "includes/enums/view_non_measurable_reason_enum.proto";
+
+message video_events_feed {
+    optional fixed64 date_time = 1;
+    optional fixed64 auction_id_64 = 2;
+    optional int32 buyer_member_id = 3;
+    optional int32 seller_member_id = 4;
+    optional int32 advertiser_id = 5;
+    optional int32 publisher_id = 6;
+    optional int32 site_id = 7;
+    optional int32 tag_id = 8;
+    optional int32 insertion_order_id = 9;
+    optional int32 line_item_id = 10;
+    optional int32 campaign_id = 11;
+    optional int32 creative_id = 12;
+    optional int32 creative_freq = 13;
+    optional int32 creative_rec = 14;
+    optional int32 brand_id = 15;
+    optional string country = 16 [default = '--'];
+    optional int32 creative_width = 17;
+    optional int32 creative_height = 18;
+    optional int32 deal_id = 19;
+    optional int32 video_was_served = 20;
+    optional int32 video_started = 21;
+    optional int32 video_was_skipped = 22;
+    optional int32 video_had_error = 23;
+    optional int32 video_hit_25_pct = 24;
+    optional int32 video_hit_50_pct = 25;
+    optional int32 video_hit_75_pct = 26;
+    optional int32 video_completed = 27;
+    optional int32 imp_type = 28;
+    optional string advertiser_currency = 29;
+    optional string publisher_currency = 30;
+    optional string site_domain = 31;
+    optional string application_id = 32;
+    optional double media_cost_cpm = 33;
+    optional double booked_revenue = 34;
+    optional double seller_revenue_cpm = 35;
+    optional playback_method_enum.PlaybackMethod playback_method = 36 [default = UNKNOWN];
+    optional video_context_enum.VideoContext video_context = 37 [default = UNKNOWN];
+    optional int32 player_size_id = 38 [default = 0];
+    optional int32 supply_type = 39;
+    optional view_result_type_enum.ViewResultType view_result = 40 [default = UNKNOWN];
+    optional view_non_measurable_reason_enum.ViewNonMeasurableReason view_non_measurable_reason = 41 [default = UNKNOWN];
+    optional int32 error_code = 42 [default = 0];
+}
