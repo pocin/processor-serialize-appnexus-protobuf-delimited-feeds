@@ -27,8 +27,11 @@ $ make compile-protobuf
 
 ## Run locally
 ```
-docker-compose run --rm dev
+docker-compose run --rm -v path/to/infiles:/data/in/files dev
 ```
+
+The parsed files will be in `./data/out/files/`
+
 
 ## Run tests
 
