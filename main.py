@@ -20,6 +20,7 @@ from google.protobuf.internal.encoder import _VarintBytes
 from google.protobuf.internal.decoder import _DecodeVarint32
 from google.protobuf.json_format import MessageToDict
 
+from keboola.docker import Config
 # from pixel_feed_pb2 import pixel_feed
 
 import importlib
@@ -110,12 +111,13 @@ def main(datadir, feed_name):
 
 if __name__ == "__main__":
     try:
-        if os.getenv("KBC_PARAMETER_DEBUG"):
-            logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-        else:
-            logging.basicConfig(stream=sys.stdout, level=logging.INFO)
         logging.debug("Starting processor")
-        feed_name = os.environ["KBC_PARAMETER_FEED_NAME"]
+        datadir = os.getenv("KBC_DATADIR")
+        params = Config(datadir).get_parameters()
+        feed_name = params.get('feed_name')
+        if feed_name is None:
+            raise KeyError("you must specify 'feed_name' parameter to "
+                           "tell which .proto file to use")
         main('/data/in/files/', feed_name)
     except (ValueError, KeyError) as err:
         logging.exception(err)
