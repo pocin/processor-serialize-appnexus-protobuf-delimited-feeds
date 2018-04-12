@@ -57,6 +57,9 @@ def test_importing_message_class_based_on_feed_name():
     assert 'date_time' in header
     assert len(header) > 5
 
+    std_feed = message_class_factory('standard_feed')
+    assert callable(std_feed)
+
 def test_main_machinery(tmpdir):
     datadir = tmpdir.mkdir('data')
 

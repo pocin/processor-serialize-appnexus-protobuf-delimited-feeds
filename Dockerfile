@@ -7,5 +7,6 @@ RUN apk add --no-cache protobuf && \
 RUN mkdir -p /data/out/files /data/in/files
 COPY . /code/
 
+ENV PYTHONPATH=./protobuf_schemas:./protobuf_schemas/includes
 # Run the application
 CMD python3 -u /code/main.py
